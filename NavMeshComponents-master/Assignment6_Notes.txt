@@ -1,0 +1,24 @@
+CHANGES FROM PREVIOUS PROJECTS TO NOTE:
+
+Typically I have the scenes neatly organized immediately in a "Scenes" folder placed in the "Assets" file. However, this time it's a little deeper in. The two scenes for the project are now in Assets\GameFiles\Scenes\
+
+Checklist:
+----------
+[x] replace player with lowbody and all components (script and components)
+[x] change up stage
+[x] change enemy behavior
+	[x] make multiple, change speed, and move them around
+[x] add collectables (nab gameobject from platform example)
+[x] Start Menu
+	[x] Start button
+[x]UI
+	[x] Score (player prefs)
+	[x] Lives (player prefs)
+	[x] Menu Panels
+		[x] Pause
+			[x] Resume, Restart, Quit buttons
+		[x Game Over
+			[x] Restart and Quit buttons
+
+PlayerPrefs: PlayerSCORE, PlayerLIVES
+

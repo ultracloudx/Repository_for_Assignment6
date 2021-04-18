@@ -17,8 +17,48 @@ Checklist:
 	[x] Menu Panels
 		[x] Pause
 			[x] Resume, Restart, Quit buttons
-		[x Game Over
+		[x] Game Over
 			[x] Restart and Quit buttons
 
 PlayerPrefs: PlayerSCORE, PlayerLIVES
 
+Hello this is Alex and this is the 6th project. which uses a mix of navmesh resources and techniques.
+
+The project makes use of some of Brackey's tutorials on how to use navmesh along with additional assets, including a lowman body model, which is a low poly character model we used for the player.
+
+The goals of the project were fairly simple:
+
+Combine the things leared about navmeshes in the tutorials,
+create a simple game scene with UI elements taken from previous projects,
+and add a couple of tracking enemies and items to pick up. 
+
+We only needed one scene, however I went ahead and added a start screen to start off.
+
+Pressing the button and starting the game automatically sets the default values for the player lives and score.
+
+Lets go ahead and open the actual build of the game up. 
+
+As usual, you can press the escape key to pause the game. The pause menu is simple; it can resume, restart the game with the default stats, or quit out of the game.
+
+The goal of the game is also simple. The player gathers the oscillating tokens for 10 points each while avoiding the cylinder enemies.
+
+If you come into contact with an enemy, you lose a life stock. Once you pick up all 4 tokens, the scene is restarted and you continue playing, trying to increase the score. 
+
+The scores and lives are maintained in static variables in the GameManager script. The values are also saved in PlayerPrefs to persist for certain functions.
+
+When you deplete all of your lives, the game is stopped and the Game Over UI panel comes up with buttons to either restart or quit the game.
+
+I've added two enemy cylinders - one on each platform - that are targeting the player. It uses the navmesh settings to find the best path possible to go towards the player. They're slower than the player but not too much where they're completely easy to avoid.
+
+I also made use of the navmesh link to jump between platforms.
+
+And that's pretty much all to it for the game. It's a simple demonstration on multiple concepts put together.
+
+Despite its simplicity, there were a few problems I had to troubleshoot along the way, some of which I assume other classmates encountered as well. To use the ThirdPerson script, we need use Unity's Standard Assets. However, on the resources not given by Brackeys, we had to personally import it from the Unity store.
+
+I assumed it was a simple process of just importing the package, but apparently just importing the Character portion of the Standard Assets package wasn't enough as it had files in other sectors of the package that it relied on, so I just imported the entire thing. 
+
+I order to use the ThirdPerson script also, the C# file itself had to be placed in a folder of the package. I was advised to put it in the lowman folder so I did and that worked.
+
+Aside from additional anomalies of uploading this to github, the project went pretty smoothly.
+Anyways that's the project. Thanks!
